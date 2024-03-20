@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main2",
+            "request": "launch",
+            "mainClass": "com.nhnacademy.regexdemo.Main2",
+            "projectName": "regexdemo"
+        },
+        {
+            "type": "java",
             "name": "ApacheCommonsCLi",
             "request": "launch",
             "mainClass": "com.nhnacademy.regexdemo.ApacheCommonsCLi",
