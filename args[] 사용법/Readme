@@ -1,0 +1,25 @@
+launch.json. 파일
+- Visual Studio Code 왼쪽 디버깅에 들어가면 생성가능
+- 실행시 원하는 String[] args 값을 주기 위한 방법(mvaen으로 실행 하는 과정이 번거로울 경우 사용)
+- 띄어쓰기가 존재하는 경우 문장을 다 분절하여야함
+
+{
+    
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.nhnacademy.Main",
+            "projectName": "recorder",
+            "args": ["-v", "-X", "GET", "http://httpbin.org/get"]
+        }
+    ]
+}
