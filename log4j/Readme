@@ -9,7 +9,7 @@ Log4j Logger
 
 pom.xml파일에 <dependencies>와 </dependencies>사이에 밑의 내용 복붙
 
-
+<dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -36,6 +36,7 @@ pom.xml파일에 <dependencies>와 </dependencies>사이에 밑의 내용 복붙
             <artifactId>log4j-core</artifactId>
             <version>2.22.1</version>
         </dependency>
+    </dependencies>
 
 
 import org.apache.logging.log4j.LogManager;
