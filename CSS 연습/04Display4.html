@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    
+</head>
+
+<body>
+    <style>
+        .td_hidden {
+            visibility: hidden;
+        }
+    
+        table {
+            border: 1px solid red;
+            width: 500px;
+        }
+    
+        td {
+            border: 1px solid gray;
+            height: 100px;
+        }
+    </style>
+    
+    <table>
+        <tr>
+            <td>1.1</td>
+            <td class="td_hidden">1.2</td>
+            <td>1.3</td>
+        </tr>
+        <tr class="td_hidden">
+            <td>2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+        </tr>
+        <tr>
+            <td>3.1</td>
+            <td>3.2</td>
+            <td>3.3</td>
+        </tr>
+    </table>
+</body>
+
+</html>

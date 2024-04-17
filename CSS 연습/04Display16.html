@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    
+</head>
+
+<body>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            margin:30px;
+            padding: 10px;
+            background-color: #fff;
+    
+        }
+        .item{
+            position: static;
+            top:10px;
+            left:10px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .item:nth-child(1){
+            background-color: skyblue;
+        }
+    
+        .item:nth-child(2){
+            background-color: yellow;
+        }
+    
+        .item:nth-child(3){
+            background-color: greenyellow;
+        }
+        /* top, left 적용되지 않습니다. */
+        .target{
+            top:10px;
+            left:10px;
+        }
+    
+    </style>
+    
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item target">2.target</div>
+        <div class="item">3</div>
+    </div>
+</body>
+
+</html>

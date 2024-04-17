@@ -1,0 +1,47 @@
+<!-- 
+CSS 우선 순위
+
+하나의 Element에 여러 가지 셀렉터로 선택이 가능
+
+각 셀렉터로 지정한 스타일 중 우선순위에 따라 적용
+
+클래스 셀렉터 > 태그 셀렉터
+
+셀렉터 우선순위 동등: 나중에 선언된 스타일 적용
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+</head>
+
+<body>
+    <style>
+        #title {
+            color: aqua;
+        }
+
+        main h1 {
+            color: yellow;
+        }
+
+        .title {
+            color: red;
+        }
+
+        .title {
+            color: blue;
+        }
+
+        .title {
+            color: green;
+        }
+    </style>
+
+    <main>
+        <h1 id="title">오드리 햅번</h1>
+    </main>
+</body>
+
+</html>
