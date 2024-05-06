@@ -14,7 +14,7 @@ public class StudentRepositoryImpl implements StudentRepository {
         //todo#2 학생등록
         String sql = "insert into jdbc_student(id, name, gender, age) values(?,?,?,?)";
 
-        try(PreparedStatement statement = connection.prepareStatement(sql);)
+        try(PreparedStatement statement = connection.prepareStatement(sql))
         {
             statement.setString(1, student.getId());
             statement.setString(2, student.getName());
@@ -37,7 +37,7 @@ public class StudentRepositoryImpl implements StudentRepository {
 
         ResultSet rs = null;
 
-        try(PreparedStatement statement = connection.prepareStatement(sql);){
+        try(PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1, id);
             rs = statement.executeQuery();
             if(rs.next()){
@@ -68,7 +68,7 @@ public class StudentRepositoryImpl implements StudentRepository {
         String sql = "update jdbc_student set name=?, gender=?, age=? where id=?";
         log.debug("update:{}", sql);
 
-        try(PreparedStatement statement = connection.prepareStatement(sql);)
+        try(PreparedStatement statement = connection.prepareStatement(sql))
         {
             int index = 0;
             statement.setString(++index, student.getName());
@@ -89,7 +89,7 @@ public class StudentRepositoryImpl implements StudentRepository {
         //todo#5 학생삭제
         String sql = "delete from jdbc_student where id=?";
 
-        try(PreparedStatement statement = connection.prepareStatement(sql);){
+        try(PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1, id);
             int result = statement.executeUpdate();
             log.debug("result:{}", result);

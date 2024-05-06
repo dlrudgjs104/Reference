@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="nhn-academy-jdbc-exercise (4)" />
+        <module name="nhn-academy-jdbc-exercise (5)" />
+        <module name="nhn-academy-jdbc-exercise (2)" />
+        <module name="nhn-academy-jdbc-exercise (3)" />
+        <module name="nhn-academy-jdbc-exercise (8)" />
+        <module name="nhn-academy-jdbc-exercise (6)" />
+        <module name="nhn-academy-jdbc-exercise (7)" />
+        <module name="nhn-academy-jdbc-exercise" />
+        <module name="nhn-academy-jdbc-exercise (1)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

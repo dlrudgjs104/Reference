@@ -42,7 +42,7 @@ public class StatementUserRepository implements UserRepository {
 
         try(Connection connection = DbUtils.getConnection();
         Statement statement = connection.createStatement();
-        ResultSet rs = statement.executeQuery(sql);)
+        ResultSet rs = statement.executeQuery(sql))
         {
             if(rs.next()){
                 return Optional.of(

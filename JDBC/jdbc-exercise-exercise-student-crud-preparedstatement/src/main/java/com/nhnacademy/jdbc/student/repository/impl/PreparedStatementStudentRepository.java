@@ -14,7 +14,7 @@ public class PreparedStatementStudentRepository implements StudentRepository {
     @Override
     public int save(Student student){
         //todo#1 학생 등록
-        String sql = "insert into jdbc_student(id,name,gender,age) values(?,?,?,?)";
+        String sql = "insert into jdbc_students (id,name,gender,age) values(?,?,?,?)";
 
         try(Connection connection = DbUtils.getConnection();
         PreparedStatement statement = connection.prepareStatement(sql);)
@@ -35,7 +35,7 @@ public class PreparedStatementStudentRepository implements StudentRepository {
     @Override
     public Optional<Student> findById(String id){
         //todo#2 학생 조회
-        String sql = "select * from jdbc_student where id = ?";
+        String sql = "select * from jdbc_students where id = ?";
         log.debug("findById {}", id);
 
         ResultSet rs = null;
@@ -70,7 +70,7 @@ public class PreparedStatementStudentRepository implements StudentRepository {
     @Override
     public int update(Student student){
         //todo#3 학생 수정 , name 수정
-        String sql = "update jdbc_student set name=?,gender=?,age=? where id = ?";
+        String sql = "update jdbc_students set name=?,gender=?,age=? where id = ?";
         log.debug("update{}", sql);
 
         try(Connection connection = DbUtils.getConnection();
@@ -93,7 +93,7 @@ public class PreparedStatementStudentRepository implements StudentRepository {
     @Override
     public int deleteById(String id){
         //todo#4 학생 삭제
-        String sql = "delete from jdbc_student where id = ?";
+        String sql = "delete from jdbc_students where id = ?";
 
         try(Connection connection = DbUtils.getConnection();
         PreparedStatement statement = connection.prepareStatement(sql);)
