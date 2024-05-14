@@ -33,7 +33,7 @@ public class FileUploadServlet extends HttpServlet {
 
                 if (part.getSize() > 0) {
                     String path = req.getServletContext().getRealPath("/ProductImage");
-                    part.write( path + File.separator + fileName);
+                    part.write(path + File.separator + fileName);
                     part.delete();
                 }
             } else {
