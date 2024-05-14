@@ -15,15 +15,15 @@ import java.io.IOException;
 @MultipartConfig(
         fileSizeThreshold   = 1024 * 1024 * 1,  // 1 MB
         maxFileSize         = 1024 * 1024 * 10, // 10 MB
-        maxRequestSize      = 1024 * 1024 * 100, // 100 MB
+        maxRequestSize      = 1024 * 1024 * 100 // 100 MB
         //location 위치는 적절히 변경합니다.
-        location = "/Users/dlrudgjs/Desktop/httpform/src/main/upload"
 )
 @Slf4j
 @WebServlet(name = "fileUploadServlet", urlPatterns = "/file/fileUpload")
 public class FileUploadServlet extends HttpServlet {
     private static final String CONTENT_DISPOSITION = "Content-Disposition";
-    private static final String UPLOAD_DIR = "/Users/dlrudgjs/Desktop/httpform/src/main/upload";
+    private static final String UPLOAD_DIR = "ProductImage";
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -34,7 +34,7 @@ public class FileUploadServlet extends HttpServlet {
                 String fileName = extractFileName(contentDisposition);
 
                 if (part.getSize() > 0) {
-                    part.write(UPLOAD_DIR + File.separator + fileName);
+                    part.write(req.getServletContext().getRealPath("") + UPLOAD_DIR + File.separator + fileName);
                     part.delete();
                 }
             } else {
