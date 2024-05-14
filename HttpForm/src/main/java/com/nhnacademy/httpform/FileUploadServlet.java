@@ -22,8 +22,6 @@ import java.io.IOException;
 @WebServlet(name = "fileUploadServlet", urlPatterns = "/file/fileUpload")
 public class FileUploadServlet extends HttpServlet {
     private static final String CONTENT_DISPOSITION = "Content-Disposition";
-    private static final String UPLOAD_DIR = "ProductImage";
-
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -34,7 +32,8 @@ public class FileUploadServlet extends HttpServlet {
                 String fileName = extractFileName(contentDisposition);
 
                 if (part.getSize() > 0) {
-                    part.write(req.getServletContext().getRealPath("") + UPLOAD_DIR + File.separator + fileName);
+                    String path = req.getServletContext().getRealPath("/ProductImage");
+                    part.write( path + File.separator + fileName);
                     part.delete();
                 }
             } else {
