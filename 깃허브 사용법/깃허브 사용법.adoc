@@ -1,0 +1,75 @@
+= GitHub
+
+== [명령어]
+
+=== 새로운 브랜치 생성
+
+ git branch [브랜치명]
+
+=== 브랜치 변경
+
+ git switch [브랜치명]
+
+=== 현재 작업 디렉토리의 상태를 확인
+
+ git status
+
+=== 커밋 기록 확인
+
+ git log
+
+=== 원격 저장소에서 변경 사항을 가져옴
+ git fetch
+
+== 파일 추가 및 커밋
+ git add .
+ git commit -m [커밋 이름]
+
+=== 변경 사항 푸시
+ git push origin main
+
+=== 다른 브랜치와 병합
+ git merge [합칠 브랜치명]
+
+=== 원격 저장소의 변경 사항을 가져와서 현재 브랜치에 병합
+ git pull
+
+=== 커밋을 되돌림
+ git reset
+
+=== 현재 작업 중인 변경 사항을 임시로 저장
+ git stash
+
+=== conflict 해결방법
+1. 충돌나는 코드중 한쪽 코드만 선택
+2. git add
+3. git commit -m [커밋 이름]
+
+=== branch, merge 내용을 그래프로 보는 방법
+ git log —online —all —graph
+
+
+== [Git-flow]
+=== 서포팅 브랜치
+- master과 develop 외에 팀 멤버들이 병렬로 일할 수 있도록 도와주는 브랜치
+- 메인 브랜치와는 다르게 필요할 때 생성하였다가 삭제
+
+1. feature 브랜치
+2. release 브랜치
+3. hotfix 브랜치
+
+=== feature 브랜치
+- 브랜치 생성 : develop으로 부터
+- 머지 : develop으로
+- prefix : feature/
+- feature 브랜치는 특정 기능 하나에 대하여 develop으로부터 생서앟여 개발하며 개발이 완료되면 다시 develop브랜치로 머지합니다.
+
+image::image/스크린샷 2024-06-13 오전 12.38.31.png[]
+
+image::image/스크린샷 2024-06-13 오전 12.38.39.png[]
+
+image::image/스크린샷 2024-06-13 오전 12.38.47.png[]
+
+image::image/스크린샷 2024-06-13 오전 12.39.11.png[]
+
+image::image/스크린샷 2024-06-13 오전 12.39.20.png[]
