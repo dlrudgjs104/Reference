@@ -25,14 +25,14 @@
  git add .
  git commit -m [커밋 이름]
 
-=== 변경 사항 푸시
- git push origin main
-
-=== 다른 브랜치와 병합
- git merge [합칠 브랜치명]
+=== 변경 사항을 원격 저장소에 반영
+ git push origin [브랜치명]
 
 === 원격 저장소의 변경 사항을 가져와서 현재 브랜치에 병합
  git pull
+
+=== 다른 브랜치와 병합
+ git merge [합칠 브랜치명]
 
 === 커밋을 되돌림
  git reset
